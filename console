@@ -1,0 +1,26 @@
+
+  Usage: sails [command]
+
+  Commands:
+
+    version               
+    lift [options]        
+    new [options] [path_to_new_app]
+    generate              
+    console               
+    consle                
+    consloe               
+    c                     
+    www                   
+    debug                 
+    configure             
+    help                  
+
+  Options:
+
+    -h, --help     output usage information
+    -v, --version  output the version number
+    --silent       
+    --verbose      
+    --silly        
+
