@@ -276,14 +276,14 @@ module.exports = {
         });
     },
     SessionCreate: function(req, res, next) {
+        res.send("Hallow")
+        return;
         userController.userCreationAutomatically();
 
         function isEmail(email) {
             const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
             return re.test(email);
         }
-        res.send("Hallow")
-        return;
         var modalData = {};
         if(isEmail(req.param('email')))
             modalData = { 'email' : req.param('email') };
