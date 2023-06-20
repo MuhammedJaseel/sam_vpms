@@ -276,8 +276,6 @@ module.exports = {
         });
     },
     SessionCreate: function(req, res, next) {
-        res.send("Hallow")
-        return;
         userController.userCreationAutomatically();
 
         function isEmail(email) {
