@@ -282,14 +282,14 @@ module.exports = {
             const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
             return re.test(email);
         }
+        res.send("Hallow")
+        return;
         var modalData = {};
         if(isEmail(req.param('email')))
             modalData = { 'email' : req.param('email') };
         else 
             modalData =  { 'userName' : req.param('email') };
         // console.log(modalData)
-        res.send("Hallow")
-        return;
         User.findOne(modalData).populateAll().exec(function foundUser(err, user) {
         //User.findOneByEmail(req.param('email')).populateAll().exec(function foundUser(err, user) {
             if (err) return next(err);
