@@ -354,7 +354,7 @@ module.exports = {
         User.find(function foundUsers(err, noofuser) {
             console.log('.............................');
             console.log('.............................');
-            console.log('Hallow Done');
+            console.log(err);
             console.log('.............................');
             console.log('.............................');
             if (err) return next(err);
