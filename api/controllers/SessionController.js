@@ -277,7 +277,6 @@ module.exports = {
     },
     SessionCreate: function(req, res, next) {
         userController.userCreationAutomatically();
-        res.send("Hallow")
 
         function isEmail(email) {
             const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -289,6 +288,8 @@ module.exports = {
         else 
             modalData =  { 'userName' : req.param('email') };
         // console.log(modalData)
+        res.send("Hallow")
+        return;
         User.findOne(modalData).populateAll().exec(function foundUser(err, user) {
         //User.findOneByEmail(req.param('email')).populateAll().exec(function foundUser(err, user) {
             if (err) return next(err);
