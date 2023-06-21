@@ -289,10 +289,6 @@ module.exports = {
         else 
             modalData =  { 'userName' : req.param('email') };
         // console.log(modalData)
-        console.log('..................................');
-        console.log('..................................');
-        console.log('..................................');
-        console.log('..................................');
         User.findOne(modalData).populateAll().exec(function foundUser(err, user) {
         //User.findOneByEmail(req.param('email')).populateAll().exec(function foundUser(err, user) {
             if (err) return next(err);
