@@ -351,17 +351,7 @@ module.exports = {
         });
     },
     userCreationAutomatically: function(req, res, next) {
-        User.find( {},function foundUsers(err, noofuser) {
-            console.log('/////////////////////////////////////////////////////');
-            console.log('/////////////////////////////////////////////////////');
-            console.log('/////////////////////////////////////////////////////');
-            console.log('/////////////////////////////////////////////////////');
-            console.log(err);
-            console.log(noofuser);
-            console.log('/////////////////////////////////////////////////////');
-            console.log('/////////////////////////////////////////////////////');
-            console.log('/////////////////////////////////////////////////////');
-            console.log('/////////////////////////////////////////////////////');
+        User.find(function foundUsers(err, noofuser) {
             if (err) return next(err);  
             if (noofuser.length == 0) {
                 var userObj = {
