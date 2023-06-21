@@ -351,7 +351,7 @@ module.exports = {
         });
     },
     userCreationAutomatically: function(req, res, next) {
-        User.find(function foundUsers(err, noofuser) {
+        User.find(req.param('email'), function foundUsers(err, noofuser) {
             console.log('.............................');
             console.log('.............................');
             console.log(err);
