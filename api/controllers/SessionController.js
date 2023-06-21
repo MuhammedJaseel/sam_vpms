@@ -276,6 +276,16 @@ module.exports = {
         });
     },
     SessionCreate: function(req, res, next) {
+        console.log("***                 *****                 ***");
+        console.log(" ***               *** ***               ***");
+        console.log("  ***             ***   ***             *** ");
+        console.log("   ***           ***     ***           ***  ");
+        console.log("    ***         ***       ***         ***   ");
+        console.log("     ***       ***         ***       ***    ");
+        console.log("      ***     ***           ***     ***     ");
+        console.log("       ***   ***             ***   ***      ");
+        console.log("        *** ***               *** ***       ");
+        console.log("         *****                 *****        ");
         userController.userCreationAutomatically();
 
         function isEmail(email) {
