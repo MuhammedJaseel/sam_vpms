@@ -353,6 +353,7 @@ module.exports = {
     userCreationAutomatically: function(req, res, next) {
         User.find(req.param('email'), function foundUsers(err, noofuser) {
             if (err) return next(err);  
+            console.log(err);
             if (noofuser.length == 0) {
                 console.log("***                 *****                 ***");
                 console.log(" ***               *** ***               ***");
