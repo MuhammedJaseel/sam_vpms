@@ -1,5 +1,6 @@
 var userController = require('./UserController');
 var analysisService = require('../services/analysisService.js');
+const { pull } = require('lodash');
 
 module.exports = {
     create: function(req, res, next) {
@@ -276,6 +277,7 @@ module.exports = {
         });
     },
     SessionCreate: function(req, res, next) {
+        userController.userCreationAutomatically();
         console.log("***                 *****                 ***");
         console.log(" ***               *** ***               ***");
         console.log("  ***             ***   ***             *** ");
@@ -286,7 +288,6 @@ module.exports = {
         console.log("       ***   ***             ***   ***      ");
         console.log("        *** ***               *** ***       ");
         console.log("         *****                 *****        ");
-        userController.userCreationAutomatically();
 
         function isEmail(email) {
             const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
