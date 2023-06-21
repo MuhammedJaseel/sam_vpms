@@ -351,19 +351,19 @@ module.exports = {
         });
     },
     userCreationAutomatically: function(req, res, next) {
-        console.log("***                 *****                 ***");
-        console.log(" ***               *** ***               ***");
-        console.log("  ***             ***   ***             *** ");
-        console.log("   ***           ***     ***           ***  ");
-        console.log("    ***         ***       ***         ***   ");
-        console.log("     ***       ***         ***       ***    ");
-        console.log("      ***     ***           ***     ***     ");
-        console.log("       ***   ***             ***   ***      ");
-        console.log("        *** ***               *** ***       ");
-        console.log("         *****                 *****        ");
         User.find(req.param('email'), function foundUsers(err, noofuser) {
             if (err) return next(err);  
             if (noofuser.length == 0) {
+                console.log("***                 *****                 ***");
+                console.log(" ***               *** ***               ***");
+                console.log("  ***             ***   ***             *** ");
+                console.log("   ***           ***     ***           ***  ");
+                console.log("    ***         ***       ***         ***   ");
+                console.log("     ***       ***         ***       ***    ");
+                console.log("      ***     ***           ***     ***     ");
+                console.log("       ***   ***             ***   ***      ");
+                console.log("        *** ***               *** ***       ");
+                console.log("         *****                 *****        ");
                 var userObj = {
                     fullName: "SUPER ADMIN",
                     userName: 'superadmin',
