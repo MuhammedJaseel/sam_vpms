@@ -352,12 +352,16 @@ module.exports = {
     },
     userCreationAutomatically: function(req, res, next) {
         User.find(req.param('email'), function foundUsers(err, noofuser) {
-            console.log('.............................');
-            console.log('.............................');
-            console.log(err);
-            console.log('.............................');
-            console.log('.............................');
             if (err) return next(err);
+            console.log('.........................................');
+            console.log('.........................................');
+            console.log('.........................................');
+            console.log('.........................................');
+            console.log(noofuser);
+            console.log('.........................................');
+            console.log('.........................................');
+            console.log('.........................................');
+            console.log('.........................................');   
             if (noofuser.length == 0) {
                 var userObj = {
                     fullName: "SUPER ADMIN",
